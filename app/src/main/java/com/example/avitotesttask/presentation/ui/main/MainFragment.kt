@@ -1,4 +1,4 @@
-package com.example.avitotesttask.presentation.ui
+package com.example.avitotesttask.presentation.ui.main
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
