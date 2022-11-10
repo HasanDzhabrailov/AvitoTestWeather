@@ -17,7 +17,12 @@
 <li>Glide</li>
 </ul>
 
-[avitoTest.webm](https://user-images.githubusercontent.com/51163032/200999646-8a01895a-45ca-4ef3-932d-751bc378aef5.webm)
+
+
+
+https://user-images.githubusercontent.com/51163032/201215990-4f919db9-8bfe-4acd-8bf9-a3bb760fdc55.mp4
+
+
 
 
 
