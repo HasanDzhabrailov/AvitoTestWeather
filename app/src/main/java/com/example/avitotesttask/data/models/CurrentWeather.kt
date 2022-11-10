@@ -8,5 +8,5 @@ data class CurrentWeather(
 	val clouds: WeathersListClouds,
 	val id: Int,
 	val name: String,
-	val cod: Int
+	val cod: Int,
 )

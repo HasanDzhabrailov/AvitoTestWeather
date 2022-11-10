@@ -1,7 +1,5 @@
 package com.example.avitotesttask.domain.usecases
 
-import com.example.avitotesttask.common.formatterToTime
-import com.example.avitotesttask.common.getToDayTime
 import com.example.avitotesttask.domain.interfaces.WeatherRepository
 import com.example.avitotesttask.domain.models.Weather
 import java.time.LocalDate
@@ -12,10 +10,11 @@ class GetToDayWeather(private val weatherRepository: WeatherRepository) {
 
 		val toDayData = weatherRepository.getToDayWeather(lat, lon, cityQ)
 		val listWeather = mutableListOf<Weather>()
-		for (data in toDayData.list){
-			val date = LocalDate.parse(data.dtTxt, DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"))
-			val time = data.dtTxt.substring(11,17)
-			if(date.dayOfMonth != LocalDate.now().dayOfMonth)
+		for (data in toDayData.list) {
+			val date =
+				LocalDate.parse(data.dtTxt, DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"))
+			val time = data.dtTxt.substring(11, 17)
+			if (date.dayOfMonth != LocalDate.now().dayOfMonth)
 				continue
 			listWeather.add(Weather(
 				temperature = data.main.temp,

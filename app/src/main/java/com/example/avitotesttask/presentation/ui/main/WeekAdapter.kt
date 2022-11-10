@@ -2,8 +2,6 @@ package com.example.avitotesttask.presentation.ui.main
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.core.content.ContentProviderCompat.requireContext
-import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.RecyclerView
 import com.example.avitotesttask.databinding.WeekItemBinding
 import com.example.avitotesttask.domain.models.WeatherToWeek
