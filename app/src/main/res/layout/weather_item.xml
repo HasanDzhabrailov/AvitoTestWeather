@@ -2,11 +2,19 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="300dp"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
     android:background="@drawable/ic_corner_rounding"
-    android:padding="5dp">
+    android:orientation="vertical"
+    android:padding="2dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintCircleRadius="5dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
 
     <TextView
         android:id="@+id/textTemperature"
@@ -14,17 +22,22 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
         android:text="+1 °C"
+        app:layout_constraintBottom_toTopOf="@+id/textTime"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textWeather" />
 
     <ImageView
         android:id="@+id/iconWeather"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="160dp"
         android:src="@drawable/ic_baseline_wb_cloudy_24"
+        app:layout_constraintEnd_toStartOf="@+id/textWindSpeed"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -34,7 +47,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
         android:text="Ощущается как: "
+        app:layout_constraintBottom_toTopOf="@+id/textWindSpeed"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -43,7 +58,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="8dp"
         android:text="Ясно"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/iconWeather" />
@@ -52,7 +67,7 @@
         android:id="@+id/textWindSpeed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="5dp"
         android:text="Скорость ветра: "
         app:layout_constraintEnd_toEndOf="parent"
@@ -64,7 +79,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
         android:text="Уровень ветра: "
+        app:layout_constraintBottom_toTopOf="@+id/textHumidity"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textWindSpeed" />
 
@@ -90,5 +107,6 @@
         android:text="Влажность:"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textWindDeg" />
+        app:layout_constraintTop_toBottomOf="@+id/textWindDeg"
+        app:layout_constraintVertical_bias="0.687" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,9 +10,4 @@
         android:name="com.example.avitotesttask.presentation.ui.main.MainFragment"
         android:label="MainFragment"
         tools:layout="@layout/fragment_main"/>
-    <fragment
-        android:id="@+id/errorConnectFragment"
-        android:name="com.example.avitotesttask.presentation.ui.error.ErrorConnectFragment"
-        android:label="fragment_error_connect"
-        tools:layout="@layout/fragment_error_connect" />
 </navigation>

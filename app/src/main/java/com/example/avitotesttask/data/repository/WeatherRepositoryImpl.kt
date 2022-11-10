@@ -4,12 +4,13 @@ import com.example.avitotesttask.data.models.CurrentWeather
 import com.example.avitotesttask.data.models.WeathersResponseBody
 import com.example.avitotesttask.data.network.ApiWeather
 import com.example.avitotesttask.domain.interfaces.WeatherRepository
+import javax.inject.Inject
 
-class WeatherRepositoryImpl(private val apiWeather: ApiWeather) : WeatherRepository {
+class WeatherRepositoryImpl @Inject constructor (private val apiWeather: ApiWeather) : WeatherRepository {
 	override suspend fun getToDayWeather(
 		lat: Float,
 		lon: Float,
-		cityQ: String,
+		cityQ: String
 	): WeathersResponseBody = apiWeather.getToDayWeather(lat, lon, cityQ)
 
 	override suspend fun getToWeekWeather(

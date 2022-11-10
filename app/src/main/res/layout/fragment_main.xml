@@ -17,7 +17,7 @@
         android:padding="5dp">
 
         <EditText
-            android:id="@+id/SearchCity"
+            android:id="@+id/searchCity"
             android:layout_width="0dp"
             android:layout_height="48dp"
             android:background="#00FFFFFF"
@@ -84,12 +84,14 @@
             android:id="@+id/currentWeather"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
             android:layout_marginBottom="7dp"
+            android:background="@drawable/ic_corner_rounding"
             android:visibility="invisible"
             app:layout_constraintBottom_toTopOf="@+id/labelNowText"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/SearchCity"
+            app:layout_constraintTop_toBottomOf="@+id/cityCurrent"
             tools:visibility="visible">
 
             <TextView
@@ -106,8 +108,8 @@
 
             <ImageView
                 android:id="@+id/iconWeather"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="15dp"
@@ -122,8 +124,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:layout_marginEnd="15dp"
+                android:layout_marginBottom="15dp"
                 android:fontFamily="@font/roboto_medium"
                 android:text="@string/now"
+                app:layout_constraintBottom_toTopOf="@+id/textHumidity"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -131,18 +135,18 @@
                 android:id="@+id/textFeelsLike"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="80dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="15dp"
                 android:fontFamily="@font/roboto_medium"
                 android:text="Ощущается как: "
                 app:layout_constraintBottom_toTopOf="@+id/textWindDeg"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/textNow"
+                app:layout_constraintStart_toEndOf="@+id/iconWeather"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/textWeather"
-                android:layout_width="wrap_content"
+                android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
                 android:layout_marginBottom="15dp"
@@ -156,24 +160,26 @@
                 android:id="@+id/textWindSpeed"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="80dp"
                 android:layout_marginBottom="15dp"
                 android:fontFamily="@font/roboto_medium"
                 android:text="Скорость ветра: "
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/textTime"
+                app:layout_constraintHorizontal_bias="0.554"
+                app:layout_constraintStart_toEndOf="@+id/textTemperature"
                 app:layout_constraintTop_toBottomOf="@+id/textWindDeg" />
 
             <TextView
                 android:id="@+id/textWindDeg"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="80dp"
                 android:layout_marginBottom="15dp"
                 android:fontFamily="@font/roboto_medium"
                 android:text="Уровень ветра: "
                 app:layout_constraintBottom_toTopOf="@+id/textWindSpeed"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/textHumidity"
+                app:layout_constraintHorizontal_bias="0.609"
+                app:layout_constraintStart_toEndOf="@+id/textWeather"
                 app:layout_constraintTop_toBottomOf="@+id/textFeelsLike" />
 
             <TextView
@@ -195,8 +201,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:layout_marginEnd="15dp"
+                android:layout_marginBottom="15dp"
                 android:fontFamily="@font/roboto_medium"
                 android:text="Влажность:"
+                app:layout_constraintBottom_toTopOf="@+id/textTime"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textNow" />
 
@@ -205,10 +213,11 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/toDayRecyclerView"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
             android:orientation="horizontal"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+
+            app:layout_constraintBottom_toTopOf="@+id/labelWeekText"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -219,14 +228,14 @@
             android:id="@+id/weatherWeekRecyclerView"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="vertical"
             app:layout_constraintBottom_toTopOf="@+id/btnDefineLocation"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.555"
             app:layout_constraintStart_toStartOf="parent"
 
-            tools:listitem="@layout/week_item"
-            app:layout_constraintTop_toBottomOf="@+id/labelWeekText" />
+            app:layout_constraintTop_toBottomOf="@+id/labelWeekText"
+            tools:listitem="@layout/week_item" />
 
         <TextView
             android:id="@+id/labelNowText"
@@ -234,6 +243,8 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/roboto_medium"
             android:text="@string/to_day"
+            android:textColor="@color/purple_700"
+            android:textSize="24sp"
             android:visibility="invisible"
             app:layout_constraintBottom_toTopOf="@+id/toDayRecyclerView"
             app:layout_constraintEnd_toEndOf="parent"
@@ -247,6 +258,8 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/roboto_medium"
             android:text="@string/week"
+            android:textColor="@color/purple_700"
+            android:textSize="24sp"
             android:visibility="invisible"
             app:layout_constraintBottom_toTopOf="@+id/weatherWeekRecyclerView"
             app:layout_constraintEnd_toEndOf="parent"
@@ -265,8 +278,9 @@
             android:src="@drawable/ic_baseline_search_24"
             app:layout_constraintBottom_toTopOf="@+id/currentWeather"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/SearchCity"
+            app:layout_constraintStart_toEndOf="@+id/searchCity"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <Button
@@ -281,6 +295,21 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/weatherWeekRecyclerView"
             app:layout_constraintVertical_bias="0.987" />
+
+        <TextView
+            android:id="@+id/cityCurrent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Махачкала"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/currentWeather"
+            app:layout_constraintEnd_toStartOf="@+id/btnSearch"
+            app:layout_constraintHorizontal_bias="0.021"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/searchCity" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

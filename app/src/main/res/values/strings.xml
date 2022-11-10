@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">AvitoTestTask</string>
-    <string name="to_day">Сегодня</string>
+    <string name="to_day">СЕГОДНЯ</string>
     <string name="now">Сейчас</string>
-    <string name="week">На неделю</string>
+    <string name="week">НА НЕДЕЛЮ</string>
 
 </resources>

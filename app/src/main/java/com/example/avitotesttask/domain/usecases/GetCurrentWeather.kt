@@ -13,7 +13,7 @@ class GetCurrentWeather(private val weatherRepository: WeatherRepository) {
 			temperature = currentData.main.temp,
 			feelsLike = currentData.main.feelsLike,
 			humidity = currentData.main.humidity,
-			weather = currentData.weather[0].main,
+			weather = currentData.weather[0].description,
 			icon = currentData.weather[0].icon,
 			windSpeed = currentData.wind.speed,
 			windDeg = currentData.wind.deg,

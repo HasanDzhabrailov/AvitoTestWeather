@@ -5,24 +5,28 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:layout_margin="5dp"
+    android:padding="5dp">
 
     <TextView
         android:id="@+id/day"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="5dp"
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/roboto_medium"
         android:text="8 Ноября"
         android:textAlignment="center"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:visibility="visible" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/nestedRecyclerview"
+        android:id="@+id/weatherRecyclerview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:listitem="@layout/weather_item"
-
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+        android:layout_margin="5dp"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/weather_item" />
 
 </LinearLayout>
