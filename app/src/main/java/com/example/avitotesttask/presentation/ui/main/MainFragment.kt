@@ -84,8 +84,7 @@ class MainFragment : Fragment(), Injectable, LocationListener {
 			b.toDayRecyclerView.adapter = weatherAdapter
 			b.toDayRecyclerView.layoutManager =
 				LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
-			b.toDayRecyclerView.addItemDecoration(DividerItemDecoration(requireContext(),
-				DividerItemDecoration.HORIZONTAL))
+
 
 			b.weatherWeekRecyclerView.adapter = weekAdapter
 			b.weatherWeekRecyclerView.layoutManager =

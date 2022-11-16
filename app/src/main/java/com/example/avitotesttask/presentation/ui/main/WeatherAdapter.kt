@@ -18,7 +18,7 @@ class WeatherAdapter : RecyclerView.Adapter<WeatherAdapter.ViewHolder>() {
 
 	override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 		val inflater = LayoutInflater.from(parent.context)
-		val binding = WeatherItemBinding.inflate(inflater)
+		val binding = WeatherItemBinding.inflate(inflater,parent,false)
 		return ViewHolder(binding)
 	}
 

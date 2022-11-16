@@ -216,7 +216,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
             android:orientation="horizontal"
-
+            android:padding="5dp"
             app:layout_constraintBottom_toTopOf="@+id/labelWeekText"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -229,6 +229,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:orientation="vertical"
+            android:paddingHorizontal="30dp"
             app:layout_constraintBottom_toTopOf="@+id/btnDefineLocation"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.555"
