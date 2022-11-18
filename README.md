@@ -17,7 +17,7 @@
 <li>Glide</li>
 </ul>
 
-
+# Использовал API <a href="https://openweathermap.org/">OPEN WEATHER</a> 
 
 
 
