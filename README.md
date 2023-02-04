@@ -84,4 +84,5 @@ https://user-images.githubusercontent.com/51163032/202102189-0f24b095-487a-4212-
 <H1>Моё резюме</H1>
 
 
-[Резюме_Android_разработчик_Хасан_Джабраилов_от_04_02_2023_14_26.pdf](https://github.com/HasanDzhabailov/AvitoTestWeather/files/10608823/_Android_._._._._04_02_2023_14_26.pdf)
+[Джабраилов Хасан-4.pdf](https://github.com/HasanDzhabailov/AvitoTestWeather/files/10608832/-4.pdf)
+
