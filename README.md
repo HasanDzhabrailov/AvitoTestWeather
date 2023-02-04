@@ -47,8 +47,30 @@
 
 
 
+<H2> При входе в приложение</H2>
 
 
+
+![Screenshot_1675513940](https://user-images.githubusercontent.com/51163032/216768003-2b51fecb-fe15-4be2-a75f-bb8825fcb04b.png)
+
+
+
+
+<H2>При клике на конпку "Моё местоположение"</H2>
+
+![Screenshot_1675513977](https://user-images.githubusercontent.com/51163032/216768022-a249d990-aeb4-4123-b822-d3f90e706d79.png)
+
+
+
+<H2>Поиск по городам</H2>
+
+![Screenshot_1675514575](https://user-images.githubusercontent.com/51163032/216768316-752cb5af-71c9-417e-acc3-dfe7dd4b3f26.png)
+
+
+
+
+
+![Screenshot_1675514079](https://user-images.githubusercontent.com/51163032/216768364-b31a70a0-9a59-468b-b816-9b48ca671f44.png)
 
 
 
